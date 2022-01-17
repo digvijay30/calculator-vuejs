@@ -25,7 +25,7 @@
       <i class="fas fa-trash-alt"></i>
     </div>
     <div class="btn-style del" @click="remove">
-        <i class="fas fa-redo"></i>
+      <i class="fas fa-redo"></i>
     </div>
   </div>
 </template>
@@ -49,16 +49,15 @@ export default {
     reset() {
       let data = {
         stroke: "reset",
-        value: '',
+        value: "",
       };
       this.$emit("displayTrack", data);
       this.sy = "";
     },
     equal() {
       var finalValue = eval(this.sy);
-      if(finalValue < 1)
-      {
-         finalValue = eval(this.sy).toFixed(2);
+      if (finalValue < 1) {
+        finalValue = eval(this.sy).toFixed(2);
       }
       let data = {
         stroke: "equal",
@@ -67,15 +66,14 @@ export default {
       this.sy = finalValue;
       this.$emit("displayTrack", data);
     },
-    remove()
-    {
-       this.sy = this.sy.substr(0,this.sy.length-1);
-        let data = {
+    remove() {
+      this.sy = this.sy.substr(0, this.sy.length - 1);
+      let data = {
         stroke: "remove",
         value: this.sy,
       };
       this.$emit("displayTrack", data);
-    }
+    },
   },
 };
 </script>

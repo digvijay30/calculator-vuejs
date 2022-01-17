@@ -25,7 +25,7 @@ export default {
       {
           if(data.stroke === '')
           {
-             this.value+=data.value;
+             this.value+=String(data.value);
           }
           else
           {
