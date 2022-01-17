@@ -63,7 +63,7 @@ export default {
         stroke: "equal",
         value: finalValue,
       };
-      this.sy = finalValue;
+      this.sy = String(finalValue);
       this.$emit("displayTrack", data);
     },
     remove() {
